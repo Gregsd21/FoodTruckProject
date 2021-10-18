@@ -57,13 +57,13 @@ public class FoodTruck {
 		this.id = id;
 	}
 
-	public static int getCount() {
-		return count;
-	}
-
-	public static void setCount(int count) {
-		FoodTruck.count = count;
-	}
-	
+//	public static int getCount() {
+//		return count;
+//	}
+//
+//	public static void setCount(int count) {
+//		FoodTruck.count = count;
+//	}
+//	
 	
 }
