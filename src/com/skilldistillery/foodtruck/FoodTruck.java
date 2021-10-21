@@ -7,7 +7,7 @@ public class FoodTruck {
 	String foodType;
 	int rating;
 	int id;
-	int count = 0;
+	static int count = 0;
 
 	public FoodTruck(String truckName, String foodType, int rating) {
 		super();
@@ -24,6 +24,7 @@ public class FoodTruck {
 		return "FoodTruck [truckName=" + truckName + ", foodType=" + foodType + ", rating=" + rating + ", id=" + id
 				+ "]";
 	}
+	
 
 	public String getTruckName() {
 		return truckName;
@@ -57,13 +58,13 @@ public class FoodTruck {
 		this.id = id;
 	}
 
-//	public static int getCount() {
-//		return count;
-//	}
-//
-//	public static void setCount(int count) {
-//		FoodTruck.count = count;
-//	}
-//	
+	public static int getCount() {
+		return count;
+	}
+
+	public static void setCount(int count) {
+		FoodTruck.count = count;
+	}
+	
 	
 }

@@ -9,8 +9,8 @@ public class FoodTruckApp {
 		int truckCount = 0;
 
 		System.out.println("Hello! Welcome To Felp! Your Favorite Food Truck Creator App! Enter your name to Begin: ");
-		String name = kB.nextLine();
-		System.out.println("Hello, " + name + "!");
+//		String name = kB.nextLine();
+//		System.out.println("Hello, " + name + "!");
 
 		FoodTruck truckArray[] = new FoodTruck[5];
 		while (truckCount < truckArray.length) {
@@ -46,25 +46,28 @@ public class FoodTruckApp {
 		
 			boolean menuSelect = true;
 			while (menuSelect) {
-				FoodTruck foodTruck = new FoodTruck(name, name, truckCount); 
+				int rating = 0;
+				String foodType = null;
+				String ftName = null;
+				FoodTruck foodTruck=new FoodTruck (ftName, foodType, rating);
 				System.out.println("Your Trucks are built! What would you like to do next?");
 				System.out.println(" --------------------------------");
-				System.out.println(" ------1.View Highest Rated------");
-				System.out.println(" -----2.List All Food Trucks-----");
-				System.out.println(" ------3.See Average Ratings-----");
+				System.out.println(" ------1.List of all Trucks------");
+				System.out.println(" --------2.Average Rating-------");
+				System.out.println(" -------3.View Highest Rated-----");
 				System.out.println(" -------------4.Quit-------------");
 				System.out.println(" --------------------------------");
 
 				int menuItem = kB.nextInt();
 				kB.nextLine();
-
+				
 				switch (menuItem) {
 				case 1:
 
 					for (int i = 0; i < truckArray.length; i++) {
 						FoodTruck selectTruck = truckArray[i];
 						if (foodTruck != null) {
-							System.out.println(foodTruck);
+							System.out.println(selectTruck);
 
 						} else {
 							continue;
@@ -81,7 +84,7 @@ public class FoodTruckApp {
 					for (int i = 0; i < truckArray.length; i++) {
 						FoodTruck selectTruck = truckArray[i];
 						if (foodTruck != null) {
-							sumRate += foodTruck.getRating();
+							sumRate += selectTruck.getRating();
 							allTrucks++;
 						}
 					}
